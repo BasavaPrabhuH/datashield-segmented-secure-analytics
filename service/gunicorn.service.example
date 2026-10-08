@@ -1,0 +1,12 @@
+[Unit]
+Description=DataShield Service API
+After=network.target
+
+[Service]
+WorkingDirectory=/var/datashield/service
+ExecStart=/usr/local/bin/gunicorn --bind 0.0.0.0:80 --workers 3 --threads 2 --timeout 60 app:app
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
