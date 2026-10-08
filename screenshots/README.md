@@ -1,29 +1,26 @@
-# Screenshot Evidence Manifest
+# Screenshot Evidence — Corrected Mapping
 
-The supplied DataShield report contains the following evidence images. The image numbers below refer to the embedded images in the supplied DOCX and are mapped to the publishing-guide screenshot categories.
+The evidence files are mapped from the embedded screenshots in the supplied DataShield report by matching the visible AWS/Linux keywords and screen content.
 
-| Guide category | Evidence from report |
-|---|---|
-| 01-vpc | image2.png — VPC CIDR / VPC overview |
-| 02-subnets | image3.png — subnet overview |
-| 03-routing | image7.png — Public Route Table; image8.png — Private Route Table; image9.png — Database Route Table; image10.png — Archive Route Table |
-| 04-security-groups | image11.png — Security Groups |
-| 05-iam | image12.png, image13.png — Analyzer policy/role; image14.png — Lambda policy/role |
-| 06-alb-target-groups | image15.png, image16.png — ALBs; image17.png, image18.png, image19.png — Target Groups |
-| 07-auto-scaling | image20.png — Launch Template; image21.png — Auto Scaling Group |
-| 08-api-gateway | image22.png, image23.png, image24.png — API Gateway |
-| 09-linux-automation | image25.png, image26.png — Collector; image27.png, image28.png — Analyzer |
-| 10-s3 | image29.png, image30.png, image31.png, image32.png — S3 configuration/evidence |
-| 11-archive-luks | image33.png, image34.png — Archive/LUKS |
-| 12-lambda-rds | image35.png, image36.png — Lambda; image37.png, image38.png — RDS |
-| 13-final-testing | image39.png — /health; image40.png — /metadata/latest |
+- 01-vpc: image4 — VPC 10.60.0.0/16
+- 02-subnets: image5 — seven subnets
+- 03-routing: image9 public route, image10 private/NAT route, image11 database local-only, image12 archive local-only
+- 04-security-groups: image13
+- 05-iam: image14 analyzer policy, image15 analyzer role, image16 Lambda role
+- 06-alb-target-groups: image17 ALB-Project, image18 ALB-Collector, image19 target groups overview, image20 TG-Service targets/health, image21 TG-Collector
+- 07-auto-scaling: image22 launch template, image23 ASG 2–6
+- 08-api-gateway: image24 resource, image25 HTTP proxy integration, image26 prod stage
+- 09-linux-automation: image27 Collector log, image28 Collector cron, image29 Analyzer files, image30 Analyzer process/S3/Archive log
+- 10-s3: image31 versioning, image32 lifecycle, image33 bucket objects, image34 processed objects
+- 11-archive-luks: image35 LUKS/lsblk, image36 archive contents
+- 12-lambda-rds: image2 Lambda function, image37 Lambda execution success, image38 RDS, image39 metadata query
+- 13-final-testing: image40 /health, image41 /metadata/latest
 
-## Additional report images
+Architecture:
+- image3 — DataShield Architecture & Workflow Overview
 
-- image1.png — complete DataShield architecture diagram; published separately as architecture/datashield-architecture.png.
-- image4.png — Internet Gateway / public networking evidence.
-- image5.png — Internet Gateway details.
-- image6.png — NAT Gateway / Elastic IP evidence.
-- image41.png — frontend page.
-
-The source DOCX was inspected directly and the mappings above follow the report's own captions and ordering. No screenshot content is fabricated or replaced.
+Additional report images not used as required evidence:
+- image1 — frontend/upload page
+- image6 — Internet Gateway
+- image7 — Elastic IP
+- image8 — NAT Gateway
