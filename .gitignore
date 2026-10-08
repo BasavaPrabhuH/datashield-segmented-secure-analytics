@@ -1,0 +1,13 @@
+*.pem
+*.ppk
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+credentials
+.aws/
+.DS_Store
+Thumbs.db
