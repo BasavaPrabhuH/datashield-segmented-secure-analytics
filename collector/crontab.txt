@@ -1,0 +1,1 @@
+*/5 * * * * /home/ec2-user/datashield/scripts/forward.sh
