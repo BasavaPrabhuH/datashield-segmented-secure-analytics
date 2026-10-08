@@ -1,0 +1,12 @@
+[Unit]
+Description=DataShield Collector Ingestion Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/ec2-user/datashield/scripts/ingest_server.py
+Restart=always
+User=root
+WorkingDirectory=/home/ec2-user/datashield/scripts
+
+[Install]
+WantedBy=multi-user.target
